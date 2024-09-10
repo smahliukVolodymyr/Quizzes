@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Quizzes": {
+    "quizzes": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Quizzes:build:production"
+              "buildTarget": "quizzes:build:production"
             },
             "development": {
-              "buildTarget": "Quizzes:build:development"
+              "buildTarget": "quizzes:build:development"
             }
           },
           "defaultConfiguration": "development"
