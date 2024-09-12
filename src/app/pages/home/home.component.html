@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div class="container">
+  <h1 class="header">Select quiz from list</h1>
+  <div class="quiz-random">
+    <button class="btn random" (click)="selectRandomQuiz()">I`m lucky</button>
+  </div>
+  <div *ngIf="!quizzes || quizzes.length === 0">
+    <p class="loading-message">Loading...</p>
+  </div>
+  <div *ngFor="let quiz of quizzes" class="quiz-item">
+    <div class="quiz-data">
+      <h3>{{ quiz.category }}</h3>
+      <p>Number of Questions: {{ quiz.questions.length }}</p>
+    </div>
+    <button class="btn" (click)="playQuiz(quiz)">Play</button>
+  </div>
+</div>

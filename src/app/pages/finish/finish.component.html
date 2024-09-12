@@ -1,1 +1,19 @@
-<p>finish works!</p>
+<div class="container">
+  <img
+    src="assets/images/congrats.png"
+    alt="congratulations"
+    class="congrats-img"
+  />
+  <div class="stats-container">
+    <h1 class="congrats-title">Congratulations</h1>
+    <h2 class="congrats-subtitle">on completing the test!</h2>
+    <p class="congrats-message">
+      Time spent for quiz: {{ quizResult.timeTaken | timeFormat }}
+    </p>
+    <p class="congrats-message">
+      Number of correct answers: {{ correctAnswersStats }}
+    </p>
+    <p class="congrats-message">Score: {{ quizResult.score.toFixed(2) }}%</p>
+  </div>
+  <button class="btn home" (click)="goHome()">Go to Home page</button>
+</div>

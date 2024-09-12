@@ -1,0 +1,39 @@
+.header {
+  text-align: center;
+  font-size: 28px;
+  color: var(--black);
+  margin: 10px;
+}
+.btn {
+  display: block;
+  width: 120px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.submit {
+  margin: 10px;
+  width: 100px;
+  background-color: var(--green-dark);
+}
+.btn.submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.questions-list {
+  padding: 10px;
+}
+.quiz-helper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.timer {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  border: 2px solid var(--red);
+  width: 100px;
+}

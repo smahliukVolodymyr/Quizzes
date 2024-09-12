@@ -11,3 +11,9 @@ export interface ApiResponse {
   response_code: number;
   results: Question[];
 }
+
+export interface QuestionFormValue {
+  questionText: string;
+  options: string[];
+  selectedOption: string;
+}

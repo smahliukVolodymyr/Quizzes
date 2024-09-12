@@ -1,0 +1,41 @@
+.container {
+  width: 60%;
+  padding: 0 10px 20px 10px;
+  text-align: center;
+}
+.congrats-img {
+  width: 100%;
+}
+.congrats-title {
+  margin: 10px;
+  font-size: 34px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.congrats-subtitle {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 44px;
+  text-transform: lowercase;
+  color: var(--red);
+}
+.btn.home {
+  width: 200px;
+}
+
+.congrats-message {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--grey);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: fit-content;
+    padding: 0 0 15px 0;
+  }
+}

@@ -1,1 +1,29 @@
-<p>play works!</p>
+<div class="container">
+  <h2 class="header">{{ quiz.category }}</h2>
+  <div class="quiz-helper">
+    <button class="btn" (click)="goHome()">Cancel quiz</button>
+    <span class="timer">{{ elapsedTime | timeFormat }}</span>
+  </div>
+
+  <form [formGroup]="quizForm" (ngSubmit)="onSubmit()">
+    <div formArrayName="questions" class="questions-list">
+      <div
+        *ngFor="let question of questionsArray.controls; let i = index"
+        [formGroupName]="i"
+      >
+        <h3 [innerHTML]="question.get('questionText')?.value"></h3>
+        <div *ngFor="let option of question.get('options')?.value">
+          <input
+            type="radio"
+            formControlName="selectedOption"
+            [value]="option"
+          />
+          <label>{{ option }}</label>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn submit" [disabled]="quizForm.invalid">
+      Submit
+    </button>
+  </form>
+</div>
